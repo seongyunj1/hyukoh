@@ -1,0 +1,332 @@
+@import "./reset.css";
+
+
+:root{
+    --Pcolor--: #F99A9A;
+    --Mfont-- : "Mfont";
+    --Pfont-- : "Pfont";
+}
+
+@font-face{
+    font-family: "Pfont"; 
+    src: url('../font/Brampton Serif Demo.otf');
+}
+@font-face{
+    font-family: "Mfont";
+    src: url('../font/NotoSansKR-VariableFont_wght.ttf');
+}
+
+body{
+    font-family: var(--Mfont--);
+}
+
+.text_hidden{display: none;}
+header{
+    width: 100%;
+    margin: auto;
+    background-color: #20202080;
+    position: fixed;
+    z-index: 9999;
+}
+header #menu{
+    width: 85%;
+    height: 90px;
+    margin: auto;
+    line-height: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+header #menu h1{
+    color: var(--Pcolor--);
+    font-size: 3rem;
+    font-family: var(--Pfont--);
+}
+
+header #menu{
+    width: 85%;
+    height: 90px;
+    margin: auto;
+    line-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#hmenu{
+    width: 100%;
+    height: 800px;
+    margin: auto;
+    display: grid;
+    background-color: #20202080;
+    grid-template-columns: repeat(2,3fr);
+    margin-left: 8%;
+    color: #ffffff;
+    display: none;
+}
+#hmenu img{width: 100%;}
+ #hmenu ul li{
+    width: 70%;
+    font-size: 4rem;
+    margin-top: 2%;
+    margin-bottom: 6%;
+}
+.menuB{
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+
+.closeB{
+    display:none; 
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+
+section{
+    width: 85%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: row;
+}
+section h3{
+    font-size: 5rem;
+    font-family: var(--Pfont--);
+}
+section p{
+    font-size: 1.2rem;
+}
+section p:nth-child(6){
+    line-height: 200%;
+    font-size: 1rem;
+}
+.IG{
+    display: flex;
+    flex-direction: row;
+}
+.IG>p{
+    line-height: 2rem;
+    margin-left: 1%;
+}
+
+#profile{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    height: 20vw;
+    position: relative;
+}
+#profile h2{
+    position: absolute;
+    top: 70%;
+    left: 43%;
+    font-size: 3rem;
+    font-family: var(--Pfont--);
+    color: var(--Pcolor--);
+}
+
+.textR,.textL{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.textR{
+    margin-left: 5%;
+}
+.textL{
+    margin-right: 5%;
+}
+
+.hyuk img{
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+.hyuk img:hover{
+    filter: grayscale(0);
+}
+
+.je img{
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+.je img:hover{
+    filter: grayscale(0);
+}
+
+.gun img{
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+.gun img:hover{
+    filter: grayscale(0);
+}
+
+.woo img{
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+.woo img:hover{
+    filter: grayscale(0);
+}
+
+
+
+
+footer{
+    margin-top: 8%;
+    margin-bottom: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #808080;
+    font-size: 0.9rem;
+}
+footer .footerT p{
+    width: 100%;
+    margin-bottom: 4%;
+    margin-left: 8%;
+}
+footer .copyright{
+    align-self: flex-end;
+    line-height: 20px;
+    margin-bottom: 2%;
+    margin-right: 5%;
+}
+
+
+
+@media screen and (max-width:1200px){
+    #hmenu ul li{
+        font-size: 2.5rem;
+    }
+    
+}
+@media screen and (max-width:1024px){
+    section h3{
+        font-size: 3rem;
+    }
+    section p{
+        font-size: 1rem;
+    }
+    section p:nth-child(6){
+        line-height: 200%;
+        font-size: 0.9rem;
+    }
+    section{
+        margin: 8% auto;
+    }
+    #profile h2{
+        top: 80%;
+        font-size: 2rem;
+    }
+    .IG img{
+        width: 8%;
+        height: fit-content;
+    }
+    .IG>p{
+        line-height: 1.5rem;
+    }
+    .textR{
+        margin-left: 3%;
+    }
+    .textL{
+        margin-right: 3%;
+        margin-left: 2%;
+    }
+    
+}
+
+
+@media screen and (max-width:767px){
+    #hmenu{
+        width: 100%;
+        margin: auto;
+        margin-left: 6%;
+    }
+    #hmenu ul li{
+        font-size: 1.5rem;
+    }
+    header #menu{
+        width: 90%;
+    }
+    header #menu h1{
+        font-size: 2rem;
+    }
+    .menuB{
+
+        right: -5%;
+    }
+    .menuB img{
+        width: 80%;
+    }
+    .closeB{
+        top: 30%;
+        right: -3%;
+    }
+    section{
+        width: 100%;
+    }
+    .textR,.textL{
+        justify-content: space-evenly;
+    }
+    .hyuk p:nth-child(6){
+        width: 95%;
+        position: absolute;
+        bottom: -35%;
+        left: 3%;
+        margin: 3% auto;
+    }
+    .hyuk{
+        margin-bottom: 30%;
+        position: relative;
+    }
+
+    .gun p:nth-child(6){
+        width: 95%;
+        position: absolute;
+        bottom: -30%;
+        left: 3%;
+        margin: 3% auto;
+    }
+    .gun{
+        margin-bottom: 30%;
+        position: relative;
+    }
+
+    .je p:nth-child(6){
+        width: 95%;
+        position: absolute;
+        bottom: -35%;
+        left: 3%;
+        margin: 3% auto;
+    }
+    .je{
+        margin-bottom: 30%;
+        position: relative;
+    }
+
+    .woo p:nth-child(6){
+        width: 95%;
+        position: absolute;
+        bottom: -30%;
+        left: 3%;
+        margin: 3% auto;
+    }
+    .woo{
+        margin-bottom: 30%;
+        position: relative;
+    }
+
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    footer .footerT p{
+        margin: 4% auto;
+    }
+    footer .copyright{
+        margin: 4% auto;
+    }
+}
