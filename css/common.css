@@ -93,16 +93,24 @@ header #menu nav .menuB{
     margin-bottom: 6%;
 }
 
-
+.frame{
+    width: 100%;
+    height: 80vw;
+}
 
 
 
 main{
-    width: 85%;
-    margin: auto;
     margin-bottom: 15%;
+    margin: auto;
+}
+.allslide{
+    width: 85%;
     overflow: hidden;
-    height: 870px;
+    margin: auto;
+}
+.slide{
+    width: 100%;
 }
 
 
@@ -110,6 +118,8 @@ main p{
     font-family: var(--Mfont--);
     margin-top: 1%;
     line-height: 200%;
+    width: 85%;
+    margin: auto;
 }
 
 #volumeR{
@@ -243,45 +253,45 @@ main p{
 }
 
 #AlbumSlide{
-    width: 85%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
     margin-bottom: 15%;
 }
-#AlbumSlide .allbox{
-    margin-top: 5%;
-    width: 100%;
-    overflow: hidden;
-    height: 600px;
-    text-align: center;
-}
-#AlbumSlide .allbox p{
-    font-size: 2rem;
-    margin-top: 2%;
-}
-
 #AlbumSlide span{
     font-size: 5rem;
     font-family: var(--Pfont--);
+    margin-left: 5%;
 }
-#AlbumSlide .box{
-    position: relative;
+.allbox{
+    margin-top: 5%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.box{
     align-items: center;
     display: inline-block;
     margin-top: 2%;
+    padding: 10%;
+    position: relative;
 }
-#AlbumSlide .box figure{
-    width: fit-content;
-    height: fit-content;
-    margin: auto;
+.box .cover{
+    width: 100%;
+    overflow: hidden;
 }
-
-
-#AlbumSlide .box .LP{
+.box .LP{
+    width: 80%;
+    overflow: hidden;
     position: absolute;
-    top: 5%;
-    left: 22%;
+    top: 10%;
+    left: 15%;
     z-index: -1;
+}
+.box p{
+    margin-top: 5%;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 
