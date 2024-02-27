@@ -47,10 +47,10 @@ header #menu nav{
     justify-content: space-between;
     position: relative;
 }
-header #menu h1{
+/* header #menu .logo{
     font-size: 3rem;
     font-family: var(--Pfont--);
-}
+} */
 
 header #menu nav .menuB{
     position: absolute;
@@ -110,6 +110,24 @@ main p{
     font-family: var(--Mfont--);
     margin-top: 1%;
     line-height: 200%;
+}
+
+#volumeR{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+#volumeR .vol{
+    width: 30%;
+    height: 50%;
+    top: 0;
+    right: 0;
+    position: absolute;
+
+} 
+#volumeR img{
+    width: 100%;
+    height: 100%;
 }
 
 #profile{
@@ -209,18 +227,7 @@ main p{
 }
 
 
-#volumeR{
-    width: 40vw;
-    height: 20%;
-    position: absolute;
-    right: -20%;
-    top: -15%;
-    
-}
-#volumeR img{
-    width: 100%;
-    height: 100%;
-}
+
 
 
 
@@ -397,13 +404,13 @@ main p{
   #vol{
     position: relative;
     width: 100%;
-    height: 20vw;
+    height: 15vw;
 }
 #vol .volumeL{
     position: absolute;
     top: -40%;
     left: 0;
-    width: 45%;
+    width: 40%;
     height: 100%;
 }
 #vol .volumeL img{
@@ -523,10 +530,12 @@ main p{
     width: 100%;
 }
 .imgbox .barcode{
-    width: fit-content;
-    background-color: #808080;
+    width: 100%;
     margin-bottom: 10%;
 
+}
+.imgbox .barcode img{
+    width: 100%;
 }
 .imgbox::before{
     content: '';
