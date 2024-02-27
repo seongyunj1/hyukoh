@@ -1,0 +1,734 @@
+@import "./reset.css";
+/* 필요할때 마다 호출해서 사용 */
+/* 헤더랑 푸터 따로 확장자 만들어서 호출해서 위와같이 사용하면 됨  */
+
+:root{
+    --Pcolor--: #F99A9A;
+    --Mfont-- : "Mfont";
+    --Pfont-- : "Pfont";
+}
+
+@font-face{
+    font-family: "Pfont"; 
+    src: url('../font/Brampton Serif Demo.otf');
+}
+@font-face{
+    font-family: "Mfont";
+    src: url('../font/NotoSansKR-VariableFont_wght.ttf');
+}
+
+*::-webkit-scrollbar{
+    background-color: #202020;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #2c2c2c;
+}
+
+body{
+    background-color: #202020;
+    color: #fff;
+    font-family: var(--Mfont--);
+}
+.text_hidden{display: none;}
+header #menu{
+    width: 100%;
+    margin: auto;
+    background-color: #20202080;
+    position: fixed;
+    z-index: 9999;
+}
+
+header #menu nav{
+    width: 85%;
+    height: 90px;
+    margin: auto;
+    line-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+/* header #menu .logo{
+    font-size: 3rem;
+    font-family: var(--Pfont--);
+} */
+
+header #menu nav .menuB{
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+.closeB{
+    display:none; 
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    top: 500%;
+    font-size: 3rem;
+    transform: translate(-50%,-50%) scale(3);
+    font-family: var(--Pfont--);
+    color: var(--Pcolor--);
+}
+
+
+#hmenu{
+    width: 100%;
+    height: 800px;
+    margin: auto;
+    display: grid;
+    background-color: #20202080;
+    grid-template-columns: repeat(2,3fr);
+    margin-left: 8%;
+    display: none;
+}
+#hmenu img{width: 100%;}
+ #hmenu ul li{
+    width: 70%;
+    font-size: 4rem;
+    margin-top: 2%;
+    margin-bottom: 6%;
+}
+
+.frame{
+    width: 100%;
+    height: 80vw;
+}
+
+
+
+main{
+    margin-bottom: 15%;
+    margin: auto;
+}
+.allslide{
+    width: 85%;
+    overflow: hidden;
+    margin: auto;
+}
+.slide{
+    width: 100%;
+}
+
+
+main p{
+    font-family: var(--Mfont--);
+    margin-top: 1%;
+    line-height: 200%;
+    width: 85%;
+    margin: auto;
+}
+
+#volumeR{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+#volumeR .vol{
+    width: 30%;
+    height: 50%;
+    top: 0;
+    right: 0;
+    position: absolute;
+
+} 
+#volumeR img{
+    width: 100%;
+    height: 100%;
+}
+
+#profile{
+    width: 85%;
+    /* overflow: hidden; */
+    margin: auto;
+    margin-bottom: 15%;
+    position: relative;
+    z-index: 999;
+}
+
+#profile .leftS img{
+    width: 90%;
+    margin-bottom: 15%;
+    margin-top: 5%;
+}
+#profile .leftS{
+    margin-right: 2%;
+}
+
+
+#profile .leftS .profileboxL:nth-of-type(1) img{
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+#profile .leftS .profileboxL:nth-of-type(1):hover img{
+    filter: grayscale(0);
+}
+
+
+#profile .leftS .profileboxL:nth-of-type(2) img{
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+#profile .leftS .profileboxL:nth-of-type(2):hover img{
+    filter: grayscale(0);
+}
+#profile .rightS img{
+    width: 90%;
+    margin-bottom: 20%;
+    margin-top: 5%;
+}
+#profile .rightS{
+    margin-right: -5%;
+}
+#profile .rightS img:first-of-type{margin-right: 2%;}
+
+
+#profile .rightS .profileboxR:nth-of-type(1) img{
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+#profile .rightS .profileboxR:nth-of-type(1):hover img{
+    filter: grayscale(0);
+}
+
+#profile .rightS .profileboxR:nth-of-type(2) img{
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+#profile .rightS .profileboxR:nth-of-type(2):hover img{
+    filter: grayscale(0);
+}
+
+#profile span{
+    font-size: 5rem;
+    font-family: var(--Pfont--);
+}
+#profile .number{
+    color: var(--Pcolor--);
+    font-family: var(--Pfont--);
+    font-size: 4rem;
+}
+#profile .number:nth-child(4){
+    transform: rotate(90deg);
+    position: absolute;
+    top: 20%;
+    right: 0%;
+}
+#profile .number:nth-child(6){
+    left: 0%;
+    bottom: 25%;
+    transform: rotate(270deg);
+    position: absolute;
+}
+#profile .textR{
+    display: flex;
+    justify-content: right;
+}
+#profile .leftS{
+    display: flex;
+    justify-content: left;
+}
+#profile .rightS{
+    display: flex;
+    justify-content: right;
+}
+
+
+
+
+
+
+#circle{
+    width: 30vw;
+    position: absolute;
+    left: -30px;
+    top: 350vh;
+    z-index: 1;
+}
+#circle img{
+    width: 100%;
+}
+
+#AlbumSlide{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 15%;
+}
+#AlbumSlide span{
+    font-size: 5rem;
+    font-family: var(--Pfont--);
+    margin-left: 5%;
+}
+.allbox{
+    margin-top: 5%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.box{
+    align-items: center;
+    display: inline-block;
+    margin-top: 2%;
+    padding: 10%;
+    position: relative;
+}
+.box .cover{
+    width: 100%;
+    overflow: hidden;
+}
+.box .LP{
+    width: 80%;
+    overflow: hidden;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    z-index: -1;
+}
+.box p{
+    margin-top: 5%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+
+.allEbox{margin-bottom: 15%;}
+
+  .effect{
+    width: 100%;
+    height: 8vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    font-family: var(--Pfont--);
+  }
+  .effect .hyuk{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    color: var(--Pcolor--);
+    border: 1px solid var(--Pcolor--);
+    white-space: nowrap;
+    animation: text;
+    animation-iteration-count: infinite;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+  }
+  .effect .hyuk:hover{
+    background-color: var(--Pcolor--);
+    color: #ffffff;
+  }
+  .effect .je{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    color: var(--Pcolor--);
+    border: 1px solid var(--Pcolor--);
+    white-space: nowrap;
+    animation: text;
+    animation-iteration-count: infinite;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+  }
+  .effect .je:hover{
+    background-color: var(--Pcolor--);
+    color: #ffffff;
+  }
+  .effect .gun{
+    width: 200%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    position: absolute;
+    left: -100%;
+    border: 1px solid #ffffff;
+    white-space: nowrap;
+    /* animation-direction: reverse; */
+    animation-iteration-count: infinite;
+    animation-duration:50s;
+    animation-name: tt;
+    animation-timing-function: linear;
+  }
+  /* .go{
+    animation-name: text;
+  } */
+  
+/* 좌표값구해서 좌표값이 도달하면 시작하게!!
+좌표값 4000? */
+
+  .effect .gun:hover{
+    background-color: #ffffff;
+    color: var(--Pcolor--);
+  }
+  .effect .woo{
+    width: 200%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    position: absolute;
+    left: -100%;
+    border: 1px solid #ffffff;
+    white-space: nowrap;
+    animation: tt;
+    animation-iteration-count: infinite;
+    animation-duration: 50s;
+    /* animation-direction: reverse; */
+    animation-timing-function: linear;
+  }
+  .effect .woo:hover{
+    background-color: #ffffff;
+    color: var(--Pcolor--);
+  }
+  .effect p{
+    flex-shrink: 0;
+    font-size: 3vw;
+    letter-spacing: 5px;
+  }
+
+  @keyframes tt{
+    100%{
+      transform:translateX(100%);
+      
+    }
+  }
+  @keyframes text{
+    100%{
+      transform:translateX(-100%);
+      
+    }
+  }
+
+
+
+  #vol{
+    position: relative;
+    width: 100%;
+    height: 15vw;
+}
+#vol .volumeL{
+    position: absolute;
+    top: -40%;
+    left: 0;
+    width: 40%;
+    height: 100%;
+}
+#vol .volumeL img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#MV{
+    width: 85%;
+    margin: auto;
+    margin-bottom: 15%;
+}
+#MV span{
+    font-size: 5rem;
+    font-family: var(--Pfont--);
+}
+#MV .video{
+    text-align: left;
+    width: 70%;
+    overflow: hidden;
+    margin: auto;
+}
+#MV .video .Vbox{
+    width: 100%;
+    height: 30vw;
+    margin: auto;
+    margin-top: 5%;
+}
+#MV .video .Vbox iframe{
+    width: 100%;
+    height: 100%;
+}
+#MV .video h3{
+    margin-top: 2%;
+}
+#MV .video p{
+    margin-top: 2%;
+    line-height: 150%;
+    color: #808080;
+}
+
+.dashed{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15%;
+}
+
+.textB{
+    width: 85%;
+    overflow: hidden;
+    margin: auto;
+    font-size: 5rem;
+    line-height: 100%;
+    margin-bottom: 5%;
+    font-family: var(--Pfont--);
+}
+.borderS{
+    width: 50%;
+    margin-top: 2%;
+}
+.borderL{
+    /* width: 100%; */
+    margin-top: 2%;
+}
+.ticket{
+    width: 85%;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-family: var(--Pfont--);
+    margin-bottom: 15%;
+}
+.menubox{
+    width: 70%;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.5rem;
+}
+.menubox .leftbox{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5%;
+}
+.menubox .leftbox img{width: 80%;}
+.menubox .rightbox img{width: 80%;}
+.menubox .rightbox{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.imgbox{
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.imgbox .group{
+    width: 80%;
+    overflow: hidden;
+    background-color: #808080;
+}
+.imgbox .group figure img{
+    width: 100%;
+}
+.imgbox .barcode{
+    width: 100%;
+    margin-bottom: 10%;
+
+}
+.imgbox .barcode img{
+    width: 100%;
+}
+.imgbox::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -2px;
+    height: 85%;
+    border-left: 5px dashed #000000;
+    z-index: 1;
+}
+
+.dashed2{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10%;
+}
+
+
+footer{
+    margin-bottom: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #808080;
+    font-size: 0.9rem;
+}
+footer .footerT p{
+    width: 100%;
+    margin-bottom: 4%;
+    margin-left: 8%;
+}
+footer .copyright{
+    align-self: flex-end;
+    line-height: 20px;
+    margin-bottom: 2%;
+    margin-right: 5%;
+}
+
+@media screen and (max-width:1200px){
+    #hmenu ul li{
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media screen and (max-width:1024px) {
+    
+    .menubox{
+        font-size: 1.8rem;
+    }
+
+}
+@media screen and (max-width:767px) {
+    
+
+    #hmenu{
+        width: 100%;
+        margin: auto;
+        margin-left: 6%;
+    }
+    #hmenu ul li{
+        font-size: 1.5rem;
+    }
+
+    
+
+   
+    header #menu .logo{
+        font-size: 1.5rem;
+    }
+    header #menu nav .menuB{
+
+        right: 15%;
+    }
+    header #menu nav .menuB img{
+        width: 80%;
+    }
+    .closeB{
+        top: 30%;
+        right: -3%;
+    }
+    main{
+        width: 100%;
+        margin-bottom: 30%;
+    }
+    #profile{
+        width: 100%;
+        margin-bottom: 30%;
+    }
+    #profile .number{
+        display: none;
+        font-size: 2rem;
+    }
+    #profile span{
+        font-size: 3rem;
+    }
+
+    #profile .text{
+        margin-left: 5%;
+    }
+    #profile .textR{
+        margin-right: 5%;
+    }
+
+    #profile .leftS{
+        margin: 0;
+        width: 100%;
+    }
+   
+    #profile .leftS img{
+        width: 100%;
+    }
+    #profile .rightS{
+        margin: 0;
+        width: 100%;
+    }
+    #profile .rightS img{
+        margin: 0;
+        width: 100%;
+    }
+  
+    #AlbumSlide{
+        margin-bottom: 30%;
+    }
+    #AlbumSlide span{
+        font-size: 3rem;
+    }
+
+    #alleffectbox{margin-bottom: 30%;}
+
+    #MV{
+        margin-bottom: 30%;
+        width: 100%;
+    }
+    #MV .video{
+        width: 100%;
+    }
+    #MV .video .Vbox{
+        height: 50vw;
+    }
+    #MV .video .Vbox iframe{
+        height: 100%;
+        width: 100%;
+    }
+    #MV span{
+        font-size: 3rem;
+        margin-left: 5%;
+    }
+    #MV .video h3{
+        margin-left: 5%;
+    }
+    #MV .video p{
+        margin-left: 5%;
+    }
+
+    .dashed{margin-bottom: 30%;}
+    .imgbox{
+        display: none;
+    }
+    .menubox{
+        border-right: none;
+        width: 100%;
+        height: 350px;
+        border-radius: 40px;
+        font-size: 1.5rem;
+    }
+    .textB{
+        font-size: 3rem;
+    }
+    .ticket{margin-bottom: 35%;}
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    footer .footerT p{
+        margin: 4% auto;
+    }
+    footer .copyright{
+        margin: 4% auto;
+    }
+
+
+}
