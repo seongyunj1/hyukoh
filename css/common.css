@@ -19,9 +19,11 @@
 
 *::-webkit-scrollbar{
     background-color: #202020;
+    width: 5%;
 }
 *::-webkit-scrollbar-thumb{
     background-color: #2c2c2c;
+   
 }
 
 body{
@@ -30,51 +32,63 @@ body{
     font-family: var(--Mfont--);
 }
 .text_hidden{display: none;}
-header #menu{
+#menu{
     width: 100%;
     margin: auto;
-    background-color: #20202080;
-    position: fixed;
-    z-index: 9999;
-}
-
-header #menu nav{
-    width: 85%;
-    height: 90px;
-    margin: auto;
-    line-height: 90px;
-    display: flex;
-    justify-content: space-between;
+    height: 100vh;
     position: relative;
+    position: fixed;
 }
-/* header #menu .logo{
-    font-size: 3rem;
-    font-family: var(--Pfont--);
-} */
-
-header #menu nav .menuB{
-    position: absolute;
-    top: 30%;
-    right: 0;
-}
-.closeB{
-    display:none; 
-    position: absolute;
-    top: 30%;
-    right: 0;
-}
-
-.logo{
+#menu .logo{
     position: absolute;
     left: 50%;
-    top: 500%;
+    top: 50%;
     font-size: 3rem;
     transform: translate(-50%,-50%) scale(3);
     font-family: var(--Pfont--);
     color: var(--Pcolor--);
+    z-index: 9999;
+    line-height: 3vh;
+}
+
+#menu nav{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    background-color: #4c4c4c4a;
+    position: fixed;
+    z-index: 9998;
 }
 
 
+
+#menu nav .menuB{
+    position: absolute;
+    top: 30%;
+    right: 8%;
+}
+
+.closeB{
+    display:none; 
+    position: absolute;
+    top: 30%;
+    right: 8%;
+}
+
+
+
+
+#menu nav .menuB:hover{
+    cursor: pointer;
+}
+#menu nav .closeB:hover{
+    cursor: pointer;
+}
+
+
+header{
+    display: none;
+}
 #hmenu{
     width: 100%;
     height: 800px;
@@ -83,7 +97,6 @@ header #menu nav .menuB{
     background-color: #20202080;
     grid-template-columns: repeat(2,3fr);
     margin-left: 8%;
-    display: none;
 }
 #hmenu img{width: 100%;}
  #hmenu ul li{
@@ -92,12 +105,6 @@ header #menu nav .menuB{
     margin-top: 2%;
     margin-bottom: 6%;
 }
-
-.frame{
-    width: 100%;
-    height: 80vw;
-}
-
 
 
 main{
@@ -146,7 +153,7 @@ main p{
     margin: auto;
     margin-bottom: 15%;
     position: relative;
-    z-index: 999;
+    z-index: 99;
 }
 
 #profile .leftS img{
@@ -559,6 +566,23 @@ main p{
     z-index: 1;
 }
 
+.topbtn .btn{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100%;
+    background-color: var(--Pcolor--);
+    color: #000000;
+    font-family: var(--Pfont--);
+    line-height: 0.5rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+.topbtn{
+    position: fixed;
+    top: 90%;
+    right: 3%;
+}
+
 .dashed2{
     width: 100%;
     overflow: hidden;
@@ -603,6 +627,9 @@ footer .copyright{
 @media screen and (max-width:767px) {
     
 
+    .logo{
+        font-size: 1rem;
+    }
     #hmenu{
         width: 100%;
         margin: auto;
@@ -615,24 +642,19 @@ footer .copyright{
     
 
    
-    header #menu .logo{
-        font-size: 1.5rem;
-    }
-    header #menu nav .menuB{
-
-        right: 15%;
-    }
-    header #menu nav .menuB img{
+    #menu nav .menuB img{
         width: 80%;
     }
     .closeB{
         top: 30%;
-        right: -3%;
+        right: 0%;
     }
     main{
         width: 100%;
         margin-bottom: 30%;
     }
+    .allslide{width: 100%;}
+    main p{width: 95%;}
     #profile{
         width: 100%;
         margin-bottom: 30%;
@@ -663,6 +685,7 @@ footer .copyright{
     #profile .rightS{
         margin: 0;
         width: 100%;
+        
     }
     #profile .rightS img{
         margin: 0;
@@ -718,6 +741,11 @@ footer .copyright{
         font-size: 3rem;
     }
     .ticket{margin-bottom: 35%;}
+
+    .topbtn .btn{
+        width: 4vw;
+        height: 4vw;
+    }
     footer{
         flex-direction: column;
         justify-content: center;
