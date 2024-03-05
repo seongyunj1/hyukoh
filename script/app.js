@@ -28,7 +28,7 @@ let tl4 = gsap.timeline({
 
 
 tl2.fromTo('.logo',{scale:6},
-{scale:1, top:"30", left:"150", x:"50%", y:"50%"});
+{scale:1, top:"4%", left:"5%", x:"50%", y:"50%"});
 
 
 
@@ -36,16 +36,17 @@ let tl3 = gsap.timeline({
     scrollTrigger:{
         trigger: '#menu',
         start: '0%',
-        end: '200%',
+        end: '10000%',
         scrub: 1 ,
         pin: true,
         pinSpacing:false,
     },
 });
 
-/////////////////////////////
 
 
+
+////////////////////////////////
 
 
 $(function () {
@@ -83,7 +84,7 @@ $(function(){
 ///////////////////////
 
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 1200) {
+    if ($(this).scrollTop() > 1000) {
         $(".topbtn").fadeIn();
     } else {
         $(".topbtn").fadeOut();
