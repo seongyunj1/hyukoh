@@ -61,7 +61,7 @@ body{
     position: relative;
     width: 100%;
     height: 10vh;
-    background-color: #4c4c4c4a;
+    background-color: #202020;
     position: fixed;
     z-index: 9998;
 }
@@ -94,6 +94,7 @@ body{
 
 header{
     display: none;
+
 }
 #hmenu{
     width: 100%;
@@ -319,6 +320,14 @@ main p{
     align-items: center;
     overflow: hidden;
     font-family: var(--Pfont--);
+    border: 1px solid var(--Pcolor--);
+    border-left: none;
+    border-right: none;
+  }
+  .EF{
+    border: 1px solid #ffffff;
+    border-left: none;
+    border-right: none;
   }
   .effect .hyuk{
     width: 300%;
@@ -327,7 +336,6 @@ main p{
     position: absolute;
     align-items: center;
     color: var(--Pcolor--);
-    border: 1px solid var(--Pcolor--);
     white-space: nowrap;
     animation: text;
     animation-iteration-count: infinite;
@@ -345,7 +353,6 @@ main p{
     position: absolute;
     align-items: center;
     color: var(--Pcolor--);
-    border: 1px solid var(--Pcolor--);
     white-space: nowrap;
     animation: text;
     animation-iteration-count: infinite;
@@ -363,8 +370,7 @@ main p{
     align-items: center;
     color: #ffffff;
     position: absolute;
-    left: -100%;
-    border: 1px solid #ffffff;
+    left: -200%;
     white-space: nowrap;
     /* animation-direction: reverse; */
     animation-iteration-count: infinite;
@@ -390,8 +396,7 @@ main p{
     align-items: center;
     color: #ffffff;
     position: absolute;
-    left: -100%;
-    border: 1px solid #ffffff;
+    left: -200%;
     white-space: nowrap;
     animation: tt;
     animation-iteration-count: infinite;
@@ -577,11 +582,6 @@ main p{
     height: 2vw;
     border-radius: 100%;
     background-color: var(--Pcolor--);
-    color: #000000;
-    font-family: var(--Pfont--);
-    line-height: 0.5rem;
-    font-size: 0.5rem;
-    text-align: center;
 }
 .topbtn{
     position: fixed;
@@ -705,6 +705,10 @@ footer .copyright{
     }
     #AlbumSlide span{
         font-size: 3rem;
+    }
+
+    .box p{
+        font-size: 0.8rem;
     }
 
     #alleffectbox{margin-bottom: 30%;}
