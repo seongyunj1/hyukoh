@@ -32,22 +32,28 @@ body{
     font-family: var(--Mfont--);
 }
 .text_hidden{display: none;}
+
+#wrap{
+    position: relative;
+}
+
 #menu{
     width: 100%;
     margin: auto;
     height: 100vh;
     position: relative;
-    position: fixed;
+    /* position: fixed; */
+    z-index: 9998;
 }
 #menu .logo{
     position: absolute;
     left: 50%;
     top: 50%;
-    font-size: 3rem;
+    font-size: 4vw;
     transform: translate(-50%,-50%) scale(3);
     font-family: var(--Pfont--);
     color: var(--Pcolor--);
-    z-index: 9999;
+    z-index: 9998;
     line-height: 3vh;
 }
 
@@ -581,7 +587,9 @@ main p{
     position: fixed;
     top: 90%;
     right: 3%;
+    z-index: 9999;
 }
+.topbtn .btn:hover{cursor: pointer;}
 
 .dashed2{
     width: 100%;
