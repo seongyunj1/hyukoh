@@ -3,7 +3,7 @@
 /* 헤더랑 푸터 따로 확장자 만들어서 호출해서 위와같이 사용하면 됨  */
 
 :root{
-    --Pcolor--: #F99A9A;
+    --Pcolor--: #fc9292;
     --Mfont-- : "Mfont";
     --Pfont-- : "Pfont";
 }
@@ -29,7 +29,7 @@
     user-select: none;
 }
 body{
-    background-color: #202020;
+    background-color: #101010;
     color: #fff;
     font-family: var(--Mfont--);
 }
@@ -46,7 +46,6 @@ body{
     position: relative;
     /* position: fixed; */
     z-index: 9990;
-    
     background-color: #202020;
     position: fixed;
 }
@@ -60,6 +59,7 @@ body{
     height: 10vh;
     position: relative;
     z-index: 9990;
+    background-color: #101010;
 }
 #menu .logo{
     position: absolute;
@@ -103,7 +103,7 @@ header{
      display: none;
      position: fixed;
      z-index: 9999;
-     background-color: #202020;
+     background-color: #101010;
      top: 10vh;
      left: 0;
      width: 100%;
@@ -115,7 +115,7 @@ header{
     margin: auto;
     padding-top: 3%;
     display: grid;
-    background-color: #202020;
+    background-color: #101010;
     grid-template-columns: repeat(2,3fr);
     margin-left: 8%;
     z-index: 9999;
