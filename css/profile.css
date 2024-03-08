@@ -16,90 +16,107 @@
     src: url('../font/NotoSansKR-VariableFont_wght.ttf');
 }
 
+*::-webkit-scrollbar{
+    background-color: #ffffff;
+    width: 5%;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #202020;
+   
+}
+*{
+    user-select: none;
+}
+
+
 body{
     font-family: var(--Mfont--);
 }
 
 .text_hidden{display: none;}
+
 #menu{
     width: 100%;
     margin: auto;
-    position: relative;
-    z-index: 9998;
-    height: 10vw;
-}
-
-#menu nav{
-    position: relative;
-    width: 100%;
     height: 10vh;
-    background-color: #4c4c4c4a;
+    position: relative;
+    /* position: fixed; */
+    z-index: 9990;
+    background-color: #202020;
     position: fixed;
-    z-index: 9998;
 }
-.logo{
+.mlogo{
+    display: block;
     color: var(--Pcolor--);
     font-family: var(--Pfont--);
     font-size: 4rem;
-    position: absolute;
-    top: 20%;
-    left: 8%;
+    line-height: 6.5rem;
+    padding-left: 5%;
 }
 
-
-
-#menu nav .menuB{
+#menu .menuB{
     position: absolute;
     top: 30%;
-    right: 8%;
+    right: 5%;
+    z-index: 9999;
+}
+#menu .menuB:hover{
+    cursor: pointer;
 }
 
-.closeB{
-    /* display:none;  */
+
+#menu .closeB{
+    display:none; 
     position: absolute;
     top: 30%;
-    right: 8%;
+    right: 5%;
+    z-index: 9999;
 }
-
-
-
-
-#menu nav .menuB:hover{
+#menu .closeB:hover{
     cursor: pointer;
 }
-#menu nav .closeB:hover{
-    cursor: pointer;
-}
+
+
 
 
 header{
-    /* display: none; */
+     display: none;
+     position: fixed;
+     z-index: 9999;
+     background-color: #202020;
+     top: 10vh;
+     left: 0;
+     width: 100%;
+     overflow: hidden;
 }
 #hmenu{
     width: 100%;
-    /* height: 800px; */
+    height: 100vh;
     margin: auto;
+    padding-top: 3%;
     display: grid;
-    color: #808080;
-    grid-template-columns: repeat(2,2fr);
+    background-color: #202020;
+    grid-template-columns: repeat(2,3fr);
     margin-left: 8%;
+    z-index: 9999;
+    color: #ffffff;
 }
 #hmenu img{width: 100%;}
  #hmenu ul li{
     width: 70%;
-    font-size: 4rem;
-    margin-top: 2%;
-    margin-bottom: 6%;
+    font-size: 3.5rem;
+    margin-top: 1%;
+    margin-bottom: 7%;
+    line-height: 5rem;
 }
 /* /////////////////////////// */
 
 #profile{
-    width: 85%;
+    width: calc(100% - 320px);
     margin: auto;
     text-align: center;
     position: relative;
-    height: 10vw;
-    top: 0;
+    height: 25vw;
 }
 #profile h2{
     position: absolute;
@@ -112,10 +129,14 @@ header{
 }
 
 section{
-    width: 85%;
-    margin: 5% auto;
+    width: calc(100% - 320px);
+    margin: auto;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: row;
+}
+section:not(:nth-of-type(1)){
+    margin-top: 5%;
 }
 section h3{
     font-size: 5rem;
@@ -190,6 +211,24 @@ section p:nth-child(6){
 }
 
 
+.topbtn .btn{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100%;
+    background-color: var(--Pcolor--);
+    border: none;
+
+}
+.topbtn{
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 9999;
+    display: none;
+}
+.topbtn .btn:hover{cursor: pointer;}
+
+
 
 
 footer{
@@ -204,7 +243,7 @@ footer{
 footer .footerT p{
     width: 100%;
     margin-bottom: 4%;
-    margin-left: 8%;
+    margin-left: 10%;
 }
 footer .copyright{
     align-self: flex-end;
@@ -216,16 +255,44 @@ footer .copyright{
 
 
 @media screen and (max-width:1200px){
+
     #hmenu ul li{
+        font-size: 2.2rem;
+    }
+
+
+    .mlogo{
+        line-height: 5rem;
+        font-size: 3.5rem;
+    }
+
+    #menu .menuB img{
+        width: 80%;
+    }
+
+    .menubox{
+        font-size: 2rem;
+    }
+
+    #profile{
+        height: 30vw;
+        margin-bottom: -10%;
+    }
+    #profile h2{
         font-size: 2.5rem;
     }
     
 }
 @media screen and (max-width:1024px){
 
-    #profile h2{
-        font-size: 2rem;
-        margin: 5% auto;
+    .mlogo{
+        line-height: 5rem;
+        font-size: 3rem;
+    }
+
+    #profile{
+        height: 25vw;
+        margin-bottom: -5%;
     }
 
     section h3{
@@ -268,43 +335,38 @@ footer .copyright{
         width: 100%;
         margin: auto;
         margin-left: 6%;
-        margin-top: 10%;
     }
     #hmenu ul li{
         font-size: 1.5rem;
-    }
-    #menu{
-        width: 100%;
-    }
-  
-    .logo{
-        font-size: 2.5rem;
-        top: 30%;
-        left: 4%;
+        margin-bottom: 20%;
+        line-height: 2.5rem;
     }
 
-    #menu nav .menuB{
+    
 
-        right: 4%;
-    }
-    .menuB img{
+   
+    #menu nav .menuB img{
         width: 80%;
     }
     .closeB{
         top: 30%;
-        right: 15%;
+        right: 0%;
     }
 
 
 
 
     #profile h2{
-        padding-top: 30%;
+        padding-top: 20%;
+        font-size: 2.5rem;
     }
     section{
         width: 100%;
         flex-direction: column;
         margin: 20% auto;
+    }
+    section:not(:nth-of-type(1)){
+        margin-top: 20%;
     }
     section figure{
         width: 95%;
@@ -337,6 +399,11 @@ footer .copyright{
     }
    
 
+    .topbtn .btn{
+        width: 4vw;
+        height: 4vw;
+    }
+
     footer{
         flex-direction: column;
         justify-content: center;
@@ -355,29 +422,54 @@ footer .copyright{
 @media screen and (max-width:400px){
 
 
+
+    header{
+        top: 8vh;
+    }
+
+
+    .mlogo{
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+    #hmenu ul li{
+        font-size: 1.2rem;
+        margin-bottom: 25%;
+        line-height: 3rem;
+    }
+
+    #menu{
+        height: 8vh;
+    }
+
+    #menu nav .menuB{
+        top: 30%;
+    }
+    #menu nav .menuB img{
+        width: 70%;
+       
+    }
+
     #profile h2{
         font-size: 1.5rem;
         margin: 5% auto;
     }
-    .logo{
-        font-size: 2rem;
-       
+
+
+    footer .footerT p{
+        width: 90%;
+        line-height: 150%;
+        font-size: 0.7rem;
+    }
+    footer .copyright{
+        font-size: 0.7rem;
     }
 
-    #menu nav .menuB{   
-        right:2%;
-    }
-    .menuB img{
-        width: 60%;
-    }
-    .closeB img{
-        width: 70%;
-    }
 
-    #menu nav{
-       
-        height: 8vh;
-       
+    .topbtn .btn{
+        width: 5px;
+        height: 10px;
+        border-radius: 1000px;
     }
-
+   
 }

@@ -1,0 +1,516 @@
+@import "./reset.css";
+
+
+:root {
+    --Pcolor--: #fc9292;
+    --Mfont--: "Mfont";
+    --Pfont--: "Pfont";
+}
+
+@font-face {
+    font-family: "Pfont";
+    src: url('../font/Brampton Serif Demo.otf');
+}
+
+@font-face {
+    font-family: "Mfont";
+    src: url('../font/NotoSansKR-VariableFont_wght.ttf');
+}
+
+
+*::-webkit-scrollbar{
+    background-color: #202020;
+    width: 5%;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #2c2c2c;
+   
+}
+*{
+    user-select: none;
+}
+
+/* ////////////////////////////////////////// */
+body {
+    font-family: var(--Mfont--);
+    background-color: #101010;
+    color: #fff;
+}
+
+
+.text_hidden {
+    display: none;
+}
+/* //////////////////////////////////////////////////// */
+
+#menu {
+    width: 100%;
+    margin: auto;
+    height: 10%;
+    position: relative;
+    z-index: 9990;
+    background-color: #101010;
+    position: fixed;
+}
+
+.mlogo {
+    display: block;
+    color: var(--Pcolor--);
+    font-family: var(--Pfont--);
+    font-size: 4rem;
+    line-height: 6.3rem;
+    padding-left: 4%;
+}
+
+
+
+#menu .menuB {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: 9999;
+}
+
+#menu .menuB:hover {
+    cursor: pointer;
+}
+
+
+#menu .closeB {
+    display: none;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: 9999;
+}
+
+#menu .closeB:hover {
+    cursor: pointer;
+}
+
+
+
+
+header {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    background-color: #101010;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#hmenu {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    padding-top: 3%;
+    display: grid;
+    background-color: #101010;
+    grid-template-columns: repeat(2, 3fr);
+    margin-left: 8%;
+    z-index: 9999;
+}
+
+#hmenu img {
+    width: 100%;
+}
+
+#hmenu ul li {
+    width: 70%;
+    font-size: 3.5rem;
+    margin-top: 1%;
+    margin-bottom: 7%;
+    line-height: 5rem;
+}
+
+/* /////////////////////////// */
+
+
+
+
+
+#text{
+    /* width: calc(100% - 320px); */
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 10%;
+    font-family: var(--Pfont--);
+    margin: auto;
+}
+
+#title{
+    width: 100%;
+    margin: 3% auto;
+    font-size: 3rem;
+    height: fit-content;
+    text-align: center;
+    color: var(--Pcolor--);
+}
+#S_title{
+    width: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 5%;
+}
+#list{
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 8%;
+    font-size: 2rem;
+}
+#list ul{
+    display: flex;
+}
+#list ul li{
+    width: fit-content;
+    height: fit-content;
+    margin-right: 3%;
+    letter-spacing: 0.1rem;
+}
+#list ul li:nth-child(2){
+    color: #A8A8A8;
+}
+
+#list ul li:nth-child(1)::after{
+    content: '';
+    width: 100%;
+    display: block;
+    height: 3px;
+    background-color: var(--Pcolor--);
+    /* transition:0.3s; */
+}
+
+/* #list ul li:hover::after{
+    width: 100%;
+    transition:0.3;
+} */
+
+
+
+
+/* ///////////////////////////////////////////// */
+
+
+
+
+.vol{
+    width: 100%;
+    height: 20rem;
+    position: absolute;
+}
+.vol .volumeR{
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    top: -50%;
+    right: 0;
+}
+.vol .volumeR img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* /////////////////////////////////////////////// */
+
+
+
+section{
+    /* width: calc(100% - 320px); */
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 3% auto;
+    gap: 8% 5%;
+}
+
+
+section .box{
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    position: relative;
+}
+
+section .box span{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    opacity: 0;
+}
+
+section .box .TT{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5%;
+    justify-content: space-around;
+    left: 0;
+    top: 0;
+    color: #fff;
+    font-family: var(--Mfont--);
+    line-height: 150%;
+    opacity: 0;
+}
+
+section .box .TT:nth-child(3) .allpbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 200%;
+    padding: 0;
+}
+section .box:nth-child(5) .TT{
+    height: 50%;
+}
+
+section .box figure img{
+    width: 100%;
+    height: fit-content;
+}
+
+
+/* ////////////////////////////// */
+
+.vol{
+    width: 100%;
+    height: 20rem;
+    position: absolute;
+}
+.vol .volumeL{
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    top: 0;
+    left: 0;
+}
+.vol .volumeL img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* //////////////////////// */
+
+
+
+footer{
+    margin-bottom: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #808080;
+    font-size: 0.9rem;
+    margin-top: 25%;
+}
+footer .footerT p{
+    width: 100%;
+    margin-bottom: 4%;
+    margin-left: 8%;
+}
+footer .copyright{
+    align-self: flex-end;
+    line-height: 20px;
+    margin-bottom: 2%;
+    margin-right: 5%;
+}
+
+/* //////////////////////// */
+
+
+
+@media screen and (max-width:1200px){
+    .mlogo{
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+
+    #hmenu ul li{
+        font-size: 2.2rem;
+    }
+
+
+    #menu .menuB img{
+        width: 80%;
+    }
+
+    .menubox{
+        font-size: 2rem;
+    }
+
+    #title{
+        font-size: 2.5rem;
+        margin: 5% auto;
+    }
+    #S_title{
+        font-size: 3.5rem;
+    }
+    #list{
+        font-size: 1.5rem;
+    }
+    .vol{
+        height: 13rem;
+    }
+
+
+}
+
+@media screen and (max-width:1024px){
+
+
+    .mlogo{
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+
+    .vol{
+        height: 13rem;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+
+    .mlogo{
+        font-size: 2.5rem;
+    }
+
+
+    #hmenu{
+        width: 100%;
+        margin: auto;
+        margin-left: 6%;
+    }
+    #hmenu ul li{
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+        line-height: 2rem;
+    }
+
+    #menu nav .menuB img{
+        width: 80%;
+    }
+    #menu .closeB{
+        top: 30%;
+        right: 8%;
+    }
+
+    .vol .volumeR{
+        top: -60%;
+    }
+    .vol .volumeL{
+        margin-top: 10%;
+    }
+
+    section{
+        grid-template-columns: repeat(2,1fr);
+        gap: 5%;
+    }
+
+
+    #title{
+        font-size: 2rem;
+        margin: 10% auto;
+    }
+    #S_title{
+        font-size: 3rem;
+        margin: 10% auto;
+    }
+    #list{
+        font-size: 1.3rem;
+    }
+
+    .vol{
+        height: 10rem;
+    }
+
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 35%;
+        font-size: 0.8rem;
+    }
+    footer .footerT p{
+        margin: 4% auto;
+    }
+    footer .copyright{
+        margin: 4% auto;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:400px){
+
+    #hmenu{
+        margin: 0 auto;
+        width: 100%;
+        padding-left: 8%;
+    }
+    #hmenu ul li{
+        font-size: 1.2rem;
+        margin-bottom: 20%;
+        line-height: 2.5rem;
+    }
+
+
+    #menu nav .menuB{
+        top: 30%;
+    }
+    #menu nav .menuB img{
+        width: 70%;
+       
+    }
+
+    .mlogo{
+        font-size: 2rem;
+        line-height: 4.5rem;
+    }
+
+    #title{
+        font-size: 1.5rem;
+        margin: 20% auto;
+    }
+    #S_title{
+        font-size: 2.5rem;
+        margin: 15% auto;
+    }
+    #list{
+        font-size: 1.1rem;
+    }
+    #list ul li{
+        margin-right: 10%;
+    }
+    .vol .volumeR{
+        display: none;
+    }
+
+    
+    footer .footerT p{
+        width: 90%;
+        line-height: 150%;
+        font-size: 0.7rem;
+    }
+    footer .copyright{
+        font-size: 0.7rem;
+    }
+}

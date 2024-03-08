@@ -140,8 +140,12 @@ main{
     width: 85%;
     overflow: hidden;
     margin: auto;
+    max-height: 800px;
 }
 .Mslide{
+    width: 100%;
+}
+.Mslide img{
     width: 100%;
 }
 
@@ -311,32 +315,32 @@ main p{
     position: relative;
     transform: translateY(10%);
 }
-.slick-slide{
+.allbox .slick-slide{
     opacity: 0.2;
 }
-.slick-slide .LP img{
+.allbox .slick-slide .LP img{
     opacity: 0;
 }
-.slick-slide .box img{
+.allbox .slick-slide .box img{
     width: 70%;
     margin: auto;
 }
-.slick-slide .box p{
+.allbox .slick-slide .box p{
     display: none;
 }
-.slick-center{
+.allbox .slick-center{
     opacity: 1;
 }
-.slick-center .box {
+.allbox .slick-center .box {
     transform: translateY(0px);
 }
-.slick-center .box p{
+.allbox .slick-center .box p{
     display: block;
 }
-.slick-center .box img{
+.allbox .slick-center .box img{
     width: 100%;
 }
-.slick-center .LP img{
+.allbox .slick-center .LP img{
     opacity: 1;
 }
 
@@ -346,11 +350,11 @@ main p{
     overflow: hidden;
 }
 .box .LP{
-    width: 80%;
+    width: 70%;
     overflow: hidden;
     position: absolute;
-    top: 9%;
-    left: 20%;
+    top: 12%;
+    left: 30%;
     z-index: -1;
     /* opacity: 0; */
 }
@@ -686,6 +690,8 @@ footer .copyright{
 
 @media screen and (max-width:1200px){
 
+
+
     #hmenu ul li{
         font-size: 2.2rem;
     }
@@ -799,7 +805,7 @@ footer .copyright{
         font-size: 3rem;
     }
 
-    .slick-slide{
+    .allbox .slick-slide{
         width: 80%;
     }
 
@@ -887,6 +893,9 @@ footer .copyright{
         top: 8vh;
     }
 
+    #menu{
+        background-color: #101010;
+    }
 
     #hmenu ul li{
         font-size: 1.2rem;
@@ -895,6 +904,9 @@ footer .copyright{
     }
 
 
+    #menu .logobox{
+        display: none;
+    }
 
     #menu .logo a{
         display: none;
