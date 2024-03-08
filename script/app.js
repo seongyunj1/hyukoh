@@ -47,11 +47,7 @@ let tl3 = gsap.timeline({
 
 
 $(function(){
-$(".allslide").slick({
-    centerMode: true,
-    centerPadding: '5px',
-    slidesToShow: 1,
-})
+$(".allslide").slick({})
 });
 // $(".Mslide").slick({
 //     centerMode: true,
