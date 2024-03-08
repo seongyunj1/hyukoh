@@ -96,7 +96,7 @@ header {
     position: fixed;
     z-index: 9999;
     background-color: #101010;
-    top: 10vh;
+    top: 10%;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -337,7 +337,7 @@ footer .copyright{
 @media screen and (max-width:1200px){
     .mlogo{
         font-size: 3.5rem;
-        line-height: 5rem;
+        line-height: 6rem;
     }
 
     #hmenu ul li{
@@ -375,7 +375,7 @@ footer .copyright{
 
     .mlogo{
         font-size: 3rem;
-        line-height: 5rem;
+        line-height: 6rem;
     }
 
     .vol{
@@ -422,6 +422,8 @@ footer .copyright{
         gap: 5%;
     }
 
+    
+   
 
     #title{
         font-size: 2rem;
@@ -456,8 +458,27 @@ footer .copyright{
 
 
 }
+/* /////////////////////////////////////////// */
 
+@media screen and (max-width:661px){
 
+    section .box .TT{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:529px){
+
+    section .box .TT{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width:463px){
+
+    section .box .TT{
+        font-size: 0.6rem;
+    }
+}
+/* ////////////////////////////////////////////// */
 
 @media screen and (max-width:400px){
 
@@ -482,9 +503,10 @@ footer .copyright{
     }
 
     .mlogo{
-        font-size: 2rem;
-        line-height: 4.5rem;
+        font-size: 2.3rem;
+        line-height: 5.5rem;
     }
+
 
     #title{
         font-size: 1.5rem;
@@ -500,6 +522,18 @@ footer .copyright{
     #list ul li{
         margin-right: 10%;
     }
+
+
+
+    section{
+        grid-template-columns: repeat(1,1fr);
+        gap: 3%;
+    }
+
+    section .box .TT{
+        font-size: 1rem;
+    }
+
     .vol .volumeR{
         display: none;
     }
