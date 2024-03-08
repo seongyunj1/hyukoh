@@ -2,7 +2,7 @@
 
 
 :root{
-    --Pcolor--: #F99A9A;
+    --Pcolor--: #fc9292;
     --Mfont-- : "Mfont";
     --Pfont-- : "Pfont";
 }
@@ -16,77 +16,129 @@
     src: url('../font/NotoSansKR-VariableFont_wght.ttf');
 }
 
+*::-webkit-scrollbar{
+    background-color: #ffffff;
+    width: 5%;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #202020;
+   
+}
+*{
+    user-select: none;
+}
+
+
 body{
     font-family: var(--Mfont--);
 }
 
 .text_hidden{display: none;}
-header{
+
+#menu{
     width: 100%;
     margin: auto;
-    background-color: #20202080;
+    height: 10%;
+    position: relative;
+    /* position: fixed; */
+    z-index: 9990;
+    background-color: #101010;
     position: fixed;
-    z-index: 9999;
 }
-header #menu{
-    width: 85%;
-    height: 90px;
-    margin: auto;
-    line-height: 90px;
-    display: flex;
-    justify-content: space-between;
-}
-header #menu h1{
+.mlogo{
+    display: block;
     color: var(--Pcolor--);
-    font-size: 3rem;
     font-family: var(--Pfont--);
+    font-size: 4rem;
+    line-height: 6.5rem;
+    padding-left: 5%;
 }
 
-header #menu{
-    width: 85%;
-    height: 90px;
-    margin: auto;
-    line-height: 90px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+#menu .menuB{
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: 9999;
+}
+#menu .menuB:hover{
+    cursor: pointer;
+}
+
+
+#menu .closeB{
+    display:none; 
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: 9999;
+}
+#menu .closeB:hover{
+    cursor: pointer;
+}
+
+
+
+
+header{
+     display: none;
+     position: fixed;
+     z-index: 9999;
+     background-color: #101010;
+     top: 10vh;
+     left: 0;
+     width: 100%;
+     overflow: hidden;
 }
 #hmenu{
     width: 100%;
-    height: 800px;
+    height: 100vh;
     margin: auto;
+    padding-top: 3%;
     display: grid;
-    background-color: #20202080;
+    background-color: #101010;
     grid-template-columns: repeat(2,3fr);
     margin-left: 8%;
+    z-index: 9999;
     color: #ffffff;
-    display: none;
 }
 #hmenu img{width: 100%;}
  #hmenu ul li{
     width: 70%;
-    font-size: 4rem;
-    margin-top: 2%;
-    margin-bottom: 6%;
+    font-size: 3.5rem;
+    margin-top: 1%;
+    margin-bottom: 7%;
+    line-height: 5rem;
 }
-.menuB{
-    position: absolute;
-    top: 30%;
-    right: 0;
-}
+/* /////////////////////////// */
 
-.closeB{
-    display:none; 
+#profile{
+    /* width: calc(100% - 320px); */
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    height: 30rem;
+    top: -50%;
+}
+#profile h2{
     position: absolute;
-    top: 30%;
-    right: 0;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    font-family: var(--Pfont--);
+    color: var(--Pcolor--);
 }
 
 section{
-    width: 85%;
-    margin: 5% auto;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: row;
+}
+section:not(:nth-of-type(1)){
+    margin-top: 5%;
 }
 section h3{
     font-size: 5rem;
@@ -102,27 +154,18 @@ section p:nth-child(6){
 .IG{
     display: flex;
     flex-direction: row;
+    height: fit-content;
+}
+.IG img{
+    width: 5%;
+    height: fit-content;
 }
 .IG>p{
-    line-height: 2rem;
+    line-height: 2vw;
     margin-left: 1%;
 }
 
-#profile{
-    width: 85%;
-    margin: auto;
-    text-align: center;
-    height: 20vw;
-    position: relative;
-}
-#profile h2{
-    position: absolute;
-    top: 70%;
-    left: 43%;
-    font-size: 3rem;
-    font-family: var(--Pfont--);
-    color: var(--Pcolor--);
-}
+
 
 .textR,.textL{
     width: 60%;
@@ -170,6 +213,24 @@ section p:nth-child(6){
 }
 
 
+.topbtn .btn{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100%;
+    background-color: var(--Pcolor--);
+    border: none;
+
+}
+.topbtn{
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 9999;
+    display: none;
+}
+.topbtn .btn:hover{cursor: pointer;}
+
+
 
 
 footer{
@@ -184,7 +245,7 @@ footer{
 footer .footerT p{
     width: 100%;
     margin-bottom: 4%;
-    margin-left: 8%;
+    margin-left: 10%;
 }
 footer .copyright{
     align-self: flex-end;
@@ -196,12 +257,50 @@ footer .copyright{
 
 
 @media screen and (max-width:1200px){
+
     #hmenu ul li{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
+
+
+    .mlogo{
+        line-height: 6rem;
+        font-size: 3.5rem;
+    }
+
+    #menu .menuB img{
+        width: 80%;
+    }
+
+    .menubox{
+        font-size: 2rem;
+    }
+
+    #profile{
+       
+        height: 25rem;
+        top: -50%;
+    }
+    #profile h2{
+        bottom: 25%;
+       font-size: 2.5rem;
+    }
+
     
 }
 @media screen and (max-width:1024px){
+
+    .mlogo{
+        line-height: 6rem;
+        font-size: 3rem;
+    }
+
+    #profile{
+       
+        height: 15.5rem;
+        top: -50%;
+    }
+
     section h3{
         font-size: 3rem;
     }
@@ -220,11 +319,11 @@ footer .copyright{
         font-size: 2rem;
     }
     .IG img{
-        width: 8%;
+        width: 7%;
         height: fit-content;
     }
     .IG>p{
-        line-height: 1.5rem;
+        line-height: 2.5vw;
     }
     .textR{
         margin-left: 3%;
@@ -245,78 +344,74 @@ footer .copyright{
     }
     #hmenu ul li{
         font-size: 1.5rem;
+        margin-bottom: 20%;
+        line-height: 2.5rem;
     }
-    header #menu{
-        width: 90%;
-    }
-    header #menu h1{
-        font-size: 2rem;
-    }
-    .menuB{
 
-        right: -5%;
-    }
-    .menuB img{
+    
+
+   
+    #menu nav .menuB img{
         width: 80%;
     }
     .closeB{
         top: 30%;
-        right: -3%;
+        right: 0%;
     }
+
+
+    #profile{
+        height: 15rem;
+        bottom: 0;
+    }
+
+
     section{
+        width: 100%;
+        flex-direction: column;
+        margin: 20% auto;
+    }
+    section:not(:nth-of-type(1)){
+        margin-top: 20%;
+    }
+    section:nth-of-type(1){
+        margin-top: 10%;
+    }
+    section figure{
+        width: 95%;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+    section figure img{
         width: 100%;
     }
     .textR,.textL{
         justify-content: space-evenly;
-    }
-    .hyuk p:nth-child(6){
         width: 95%;
-        position: absolute;
-        bottom: -35%;
-        left: 3%;
-        margin: 3% auto;
-    }
-    .hyuk{
-        margin-bottom: 30%;
-        position: relative;
+        height: 60vh;
+        line-height: 200%;
     }
 
-    .gun p:nth-child(6){
-        width: 95%;
-        position: absolute;
-        bottom: -30%;
-        left: 3%;
-        margin: 3% auto;
+    .IG img{
+        width: 6%;
+        height: fit-content;
     }
+    .IG>p{
+        line-height: 5vw;
+    }
+   
     .gun{
-        margin-bottom: 30%;
-        position: relative;
-    }
-
-    .je p:nth-child(6){
-        width: 95%;
-        position: absolute;
-        bottom: -35%;
-        left: 3%;
-        margin: 3% auto;
-    }
-    .je{
-        margin-bottom: 30%;
-        position: relative;
-    }
-
-    .woo p:nth-child(6){
-        width: 95%;
-        position: absolute;
-        bottom: -30%;
-        left: 3%;
-        margin: 3% auto;
+        flex-direction: column-reverse;
     }
     .woo{
-        margin-bottom: 30%;
-        position: relative;
+        flex-direction: column-reverse;
     }
+   
 
+    .topbtn .btn{
+        width: 4vw;
+        height: 4vw;
+    }
 
     footer{
         flex-direction: column;
@@ -329,4 +424,64 @@ footer .copyright{
     footer .copyright{
         margin: 4% auto;
     }
+}
+
+
+
+
+@media screen and (max-width:400px){
+
+
+
+    header{
+        top: 8%;
+    }
+
+
+    .mlogo{
+        font-size: 2.5rem;
+        line-height: 4.5rem;
+    }
+    #hmenu ul li{
+        font-size: 1.2rem;
+        margin-bottom: 25%;
+        line-height: 3rem;
+    }
+
+    #menu{
+        height: 8%;
+    }
+
+    #menu nav .menuB{
+        top: 30%;
+    }
+    #menu nav .menuB img{
+        width: 70%;
+       
+    }
+
+    #profile{
+        height: 15rem;
+    }
+    #profile h2{
+        font-size: 2rem;
+    }
+
+
+    footer .footerT p{
+        width: 90%;
+        line-height: 150%;
+        font-size: 0.7rem;
+    }
+    footer .copyright{
+        font-size: 0.7rem;
+    }
+
+
+    .topbtn .btn{
+        width: 15px;
+        height: 15px;
+        border-radius: 100px;
+    }
+   
 }
