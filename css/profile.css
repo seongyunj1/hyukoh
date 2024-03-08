@@ -2,7 +2,7 @@
 
 
 :root{
-    --Pcolor--: #F99A9A;
+    --Pcolor--: #fc9292;
     --Mfont-- : "Mfont";
     --Pfont-- : "Pfont";
 }
@@ -38,11 +38,11 @@ body{
 #menu{
     width: 100%;
     margin: auto;
-    height: 10vh;
+    height: 10%;
     position: relative;
     /* position: fixed; */
     z-index: 9990;
-    background-color: #202020;
+    background-color: #101010;
     position: fixed;
 }
 .mlogo{
@@ -83,7 +83,7 @@ header{
      display: none;
      position: fixed;
      z-index: 9999;
-     background-color: #202020;
+     background-color: #101010;
      top: 10vh;
      left: 0;
      width: 100%;
@@ -95,7 +95,7 @@ header{
     margin: auto;
     padding-top: 3%;
     display: grid;
-    background-color: #202020;
+    background-color: #101010;
     grid-template-columns: repeat(2,3fr);
     margin-left: 8%;
     z-index: 9999;
@@ -112,15 +112,17 @@ header{
 /* /////////////////////////// */
 
 #profile{
-    width: calc(100% - 320px);
+    /* width: calc(100% - 320px); */
+    width: 90%;
     margin: auto;
     text-align: center;
     position: relative;
-    height: 25vw;
+    height: 30rem;
+    top: -50%;
 }
 #profile h2{
     position: absolute;
-    top: 50%;
+    bottom: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 3rem;
@@ -129,7 +131,7 @@ header{
 }
 
 section{
-    width: calc(100% - 320px);
+    width: 90%;
     margin: auto;
     margin-bottom: 5%;
     display: flex;
@@ -262,7 +264,7 @@ footer .copyright{
 
 
     .mlogo{
-        line-height: 5rem;
+        line-height: 6rem;
         font-size: 3.5rem;
     }
 
@@ -275,24 +277,28 @@ footer .copyright{
     }
 
     #profile{
-        height: 30vw;
-        margin-bottom: -10%;
+       
+        height: 25rem;
+        top: -50%;
     }
     #profile h2{
-        font-size: 2.5rem;
+        bottom: 25%;
+       font-size: 2.5rem;
     }
+
     
 }
 @media screen and (max-width:1024px){
 
     .mlogo{
-        line-height: 5rem;
+        line-height: 6rem;
         font-size: 3rem;
     }
 
     #profile{
-        height: 25vw;
-        margin-bottom: -5%;
+       
+        height: 15.5rem;
+        top: -50%;
     }
 
     section h3{
@@ -354,12 +360,12 @@ footer .copyright{
     }
 
 
-
-
-    #profile h2{
-        padding-top: 20%;
-        font-size: 2.5rem;
+    #profile{
+        height: 15rem;
+        bottom: 0;
     }
+
+
     section{
         width: 100%;
         flex-direction: column;
@@ -367,6 +373,9 @@ footer .copyright{
     }
     section:not(:nth-of-type(1)){
         margin-top: 20%;
+    }
+    section:nth-of-type(1){
+        margin-top: 10%;
     }
     section figure{
         width: 95%;
@@ -419,18 +428,19 @@ footer .copyright{
 
 
 
+
 @media screen and (max-width:400px){
 
 
 
     header{
-        top: 8vh;
+        top: 8%;
     }
 
 
     .mlogo{
         font-size: 2.5rem;
-        line-height: 4rem;
+        line-height: 4.5rem;
     }
     #hmenu ul li{
         font-size: 1.2rem;
@@ -439,7 +449,7 @@ footer .copyright{
     }
 
     #menu{
-        height: 8vh;
+        height: 8%;
     }
 
     #menu nav .menuB{
@@ -450,9 +460,11 @@ footer .copyright{
        
     }
 
+    #profile{
+        height: 15rem;
+    }
     #profile h2{
-        font-size: 1.5rem;
-        margin: 5% auto;
+        font-size: 2rem;
     }
 
 
@@ -467,9 +479,9 @@ footer .copyright{
 
 
     .topbtn .btn{
-        width: 5px;
-        height: 10px;
-        border-radius: 1000px;
+        width: 15px;
+        height: 15px;
+        border-radius: 100px;
     }
    
 }
