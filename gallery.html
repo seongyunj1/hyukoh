@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GALLERY</title>
+    <link rel="stylesheet" href="./css/gallery.css" type="text/css">
+    <script src="./script/jquery-3.7.1.min.js"></script>
+    <script src="./script/jquery-ui.min.js"></script>
+    <script src="./script/gallery.js"></script>
 </head>
 
 <body>
@@ -76,48 +80,54 @@
 
 
 
+        <div id="text">
 
-        <!-- title -->
-        <h3>GALLERY</h3>
-        <!-- //title -->
-
-
-
-        <!-- photo -->
-        <div class="span">
-            <span>PHOTO</span>
-            <span>BOOK</span>
+            
+            <!-- title -->
+            <div id="title">
+                <h3>GALLERY</h3>
+            </div>
+            <!-- //title -->
+            
+            
+            
+            <!-- photo -->
+            <div id="S_title">
+                <span>PHOTO</span>
+                <span>BOOK</span>
+            </div>
+            <!-- //photo -->
+            
+            
+            <!-- list -->
+            <div id="list">
+                <ul>
+                    <li>
+                        <a href="#">OH HYUK</a>
+                        <span></span>
+                    </li>
+                    
+                    <li>
+                        <a href="#">IM DONG GUN</a>
+                        <span></span>
+                    </li>
+                    
+                    <li>
+                        <a href="#">IM HYUN JE</a>
+                        <span></span>
+                    </li>
+                    
+                    <li>
+                        <a href="#">LEE IN WOO</a>
+                        <span></span>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <!-- //list -->
         </div>
-        <!-- //photo -->
-
-
-        <!-- list -->
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">OH HYUK</a>
-                    <span></span>
-                </li>
-
-                <li>
-                    <a href="#">IM DONG GUN</a>
-                    <span></span>
-                </li>
-
-                <li>
-                    <a href="#">IM HYUN JE</a>
-                    <span></span>
-                </li>
-
-                <li>
-                    <a href="#">LEE IN WOO</a>
-                    <span></span>
-                </li>
-
-            </ul>
-        </nav>
-        <!-- //list -->
-
+            
 
 
 
@@ -127,69 +137,76 @@
             <h2 hidden>PHOTO</h2>
 
             <div class="allphoto">
-                <figure>
-                    <img src="./img/photo1.jpg" alt="P1">
-                </figure>
+                <div class="Pbox">
+                    <figure>
+                        <img src="./img/photo1.jpg" alt="P1">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo2.jpg" alt="P2">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo3.jpg" alt="P3">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo4.jpg" alt="P4">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo5.jpg" alt="P5">
+                    </figure>
+                </div>
 
-                <figure>
-                    <img src="./img/photo2.jpg" alt="P2">
-                </figure>
+                <div class="Pbox">
+                    <figure>
+                        <img src="./img/photo6.jpg" alt="P6">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo1.jpg" alt="P1">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo7.jpg" alt="P7">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo8.jpg" alt="P8">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo9.jpg" alt="P9">
+                    </figure>
+                </div>
+               
 
-                <figure>
-                    <img src="./img/photo3.jpg" alt="P3">
-                </figure>
+                <div class="Pbox">
+                    <figure>
+                        <img src="./img/photo10.jpg" alt="P10">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo11.jpg" alt="P11">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo12.jpg" alt="P12">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo13.jpg" alt="P13">
+                    </figure>
+    
+                    <figure>
+                        <img src="./img/photo14.jpg" alt="P14">
+                    </figure>
+                </div>
 
-                <figure>
-                    <img src="./img/photo4.jpg" alt="P4">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo5.jpg" alt="P5">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo6.jpg" alt="P6">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo1.jpg" alt="P1">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo7.jpg" alt="P7">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo8.jpg" alt="P8">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo9.jpg" alt="P9">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo10.jpg" alt="P10">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo11.jpg" alt="P11">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo12.jpg" alt="P12">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo13.jpg" alt="P13">
-                </figure>
-
-                <figure>
-                    <img src="./img/photo14.jpg" alt="P14">
-                </figure>
-
-                <figure>
+                <!-- <figure>
                     <img src="./img/photo15.jpg" alt="P15">
-                </figure>
+                </figure> -->
             </div>
 
         </section>
