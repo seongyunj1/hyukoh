@@ -120,7 +120,7 @@ header{
 #text{
     /* width: calc(100% - 320px); */
     width: 90%;
-    overflow: hidden;
+    height: fit-content;
     position: relative;
     padding-top: 10%;
     font-family: var(--Pfont--);
@@ -129,7 +129,7 @@ header{
 
 #title{
     width: 100%;
-    margin: 3% auto;
+    margin: 5% auto;
     font-size: 3rem;
     height: fit-content;
     text-align: center;
@@ -150,7 +150,7 @@ header{
     margin-top: 8%;
     font-size: 1.3rem;
     font-family: var(--Mfont--);
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 #list ul{
     display: flex;
@@ -242,7 +242,7 @@ footer .copyright{
 
     .mlogo{
         font-size: 3.5rem;
-        line-height: 6rem;
+        line-height: 6.5rem;
     }
 
     #hmenu ul li{
@@ -258,12 +258,9 @@ footer .copyright{
         font-size: 2rem;
     }
 
-    #text{
-        height: 40vw;
-    }
 
     #title{
-        font-size: 2rem;
+        font-size: 3rem;
         margin: 5% auto;
     }
     #S_title{
@@ -291,6 +288,18 @@ footer .copyright{
 
 @media screen and (max-width:1024px){
 
+
+    #title{
+        margin-top: 10%;
+    }
+    #S_title{
+        margin-top: 3%;
+    }
+    #list{
+        margin-bottom: 0;
+    }
+
+
     section{
         margin-top: 5%;
     }
@@ -302,10 +311,41 @@ footer .copyright{
     #hmenu ul li{
         font-size: 1.5rem;
     }
+
+    .mlogo{
+        font-size: 3rem;
+        line-height: 5.3rem;
+    }
 }
 
 
 @media screen and (max-width:767px){
+
+
+
+    .mlogo{
+        font-size: 2.5rem;
+    }
+
+
+    #hmenu{
+        width: 100%;
+        margin: auto;
+        margin-left: 6%;
+    }
+    #hmenu ul li{
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+        line-height: 2rem;
+    }
+
+    #menu nav .menuB img{
+        width: 80%;
+    }
+    #menu .closeB{
+        top: 30%;
+        right: 8%;
+    }
 
 
     #text{
@@ -326,7 +366,8 @@ footer .copyright{
     section{
         margin-top: 0;
         grid-template-columns: repeat(2,1fr);
-        margin-bottom: 70vw;
+        margin-bottom: 25rem;
+        gap: 5%;
     }
 
     section article .mv{
@@ -354,24 +395,48 @@ footer .copyright{
 }
 
 @media screen and (max-width:520px){
+    
+
+    #text{
+        /* height: 20rem; */
+        padding-top: 15%;
+        overflow: hidden;
+    }
+    #title h2{
+        margin-bottom: 10%;
+    }
+    #S_title h2{
+        margin-bottom: 10%;
+    }
+
+    #list ul{
+        /* margin-top: 30%; */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    #list ul li{
+        font-size: 0.9rem;
+        margin-bottom: 5%;
+    }
+    #list{
+        margin-bottom: 2%;
+    }
+    
+    
     section{
-        margin-bottom: 85vw;
+        margin-bottom: 20rem;
     }
     footer{
         line-height: 150%;
     }
     #list{
         width: 100%;
+        font-size: 0.6rem;
     }
     #list ul{
         width: 100%;
     }
-    #list ul li{
-        width: 100%;
-        height: 15vw;
-        flex-wrap: wrap;
-        background-color: #808080;
-    }
+  
 }
 
 @media screen and (max-width:600px){
@@ -387,25 +452,74 @@ footer .copyright{
 @media screen and (max-width:400px){
 
 
-    #title{
+    #hmenu{
+        margin: 0 auto;
+        width: 100%;
+        padding-left: 8%;
+    }
+    #hmenu ul li{
+        font-size: 1.2rem;
+        margin-bottom: 20%;
+        line-height: 2.5rem;
+    }
+
+
+    #menu nav .menuB{
+        top: 30%;
+    }
+    #menu nav .menuB img{
+        width: 70%;
+       
+    }
+    .closeB img{
+        width: 1.5rem;
+    }
+
+    .mlogo{
+        font-size: 2.3rem;
+        line-height: 5rem;
+    }
+
+
+
+    #title h2{
         font-size: 1.5rem;
-        margin: 5% auto;
+        margin-top: 25%;
     }
-    #S_title{
-        font-size: 2rem;
+    #S_title h2{
+        font-size: 1.5rem;
+        margin-top: 10%;
     }
-    #list{
-        font-size: 0.8rem;
+    #list ul{
+        font-size: 0.9rem;
     }
+    #list ul li{
+        margin-bottom: 8%;
+    }
+   
 
 
     section{
         grid-template-columns: repeat(1,1fr);
-        margin-bottom: 100vw;
+        gap: 0;
+        margin-bottom: 0;
     }
 
+    section article{
+        margin-bottom: 4rem;
+    }
     section article .mv{
         height: 50vw;
     }
 
+   
+    
+
 }
+
+
+/* @media screen and (max-width:386px){
+    section{
+        margin-bottom: 148rem;
+    }
+} */

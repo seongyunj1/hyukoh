@@ -393,11 +393,11 @@ footer .copyright{
     }
 
     .IG img{
-        width: 6%;
-        height: fit-content;
+        width: 30px;
+        height: 30px;
     }
     .IG>p{
-        line-height: 5vw;
+        line-height: 30px;
     }
    
     .gun{
@@ -432,8 +432,36 @@ footer .copyright{
 @media screen and (max-width:400px){
 
 
+    #hmenu{
+        margin: 0 auto;
+        width: 100%;
+        padding-left: 8%;
+    }
+    #hmenu ul li{
+        font-size: 1.2rem;
+        margin-bottom: 20%;
+        line-height: 2.5rem;
+    }
 
-    header{
+
+    #menu nav .menuB{
+        top: 30%;
+    }
+    #menu nav .menuB img{
+        width: 70%;
+       
+    }
+
+    .mlogo{
+        font-size: 2.3rem;
+        line-height: 5.5rem;
+    }
+
+
+
+
+
+    /* header{
         top: 8%;
     }
 
@@ -458,7 +486,7 @@ footer .copyright{
     #menu nav .menuB img{
         width: 70%;
        
-    }
+    } */
 
     #profile{
         height: 15rem;
@@ -467,6 +495,8 @@ footer .copyright{
         font-size: 2rem;
     }
 
+
+    .IG img{margin-right: 1%;}
 
     footer .footerT p{
         width: 90%;

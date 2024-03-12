@@ -43,6 +43,8 @@ body {
 }
 /* //////////////////////////////////////////////////// */
 
+
+
 #menu {
     width: 100%;
     margin: auto;
@@ -131,22 +133,17 @@ header {
 
 
 
-
 #text{
-    /* width: calc(100% - 320px); */
     width: 90%;
     overflow: hidden;
-    position: relative;
-    padding-top: 10%;
+    padding-top: 15%;
     font-family: var(--Pfont--);
     margin: auto;
 }
 
 #title{
     width: 100%;
-    margin: 3% auto;
     font-size: 3rem;
-    height: fit-content;
     text-align: center;
     color: var(--Pcolor--);
 }
@@ -156,14 +153,14 @@ header {
     display: flex;
     justify-content: space-between;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 #list{
     width: 100%;
-    height: fit-content;
     margin: auto;
-    margin-top: 8%;
+    margin-top: 10%;
     font-size: 2rem;
+    margin-bottom: 2%;
 }
 #list ul{
     display: flex;
@@ -173,9 +170,10 @@ header {
     height: fit-content;
     margin-right: 3%;
     letter-spacing: 0.1rem;
-}
-#list ul li:nth-child(2){
     color: #A8A8A8;
+}
+#list ul li:nth-child(1){
+    color: #ffffff;
 }
 
 #list ul li:nth-child(1)::after{
@@ -184,122 +182,43 @@ header {
     display: block;
     height: 3px;
     background-color: var(--Pcolor--);
-    /* transition:0.3s; */
-}
-
-/* #list ul li:hover::after{
-    width: 100%;
-    transition:0.3;
-} */
-
-
-
-
-/* ///////////////////////////////////////////// */
-
-
-
-
-.vol{
-    width: 100%;
-    height: 20rem;
-    position: absolute;
-}
-.vol .volumeR{
-    position: absolute;
-    width: 30%;
-    height: 80%;
-    top: -50%;
-    right: 0;
-}
-.vol .volumeR img{
-    width: 100%;
-    height: 100%;
 }
 
 
 
-/* /////////////////////////////////////////////// */
-
+/* /////////////////////////////// */
 
 
 section{
-    /* width: calc(100% - 320px); */
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin: 3% auto;
-    gap: 8% 5%;
+    width: 95%;
+    height: 70vw;
+    overflow: hidden;
+    margin: auto;
 }
-
-
-section .box{
-    width: 100%;
-    position: relative;
-}
-
-section .box span{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6),rgba(0,0,0,0.6));
-    opacity: 0;
-}
-
-section .box .TT{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 2% 5%;
-    justify-content: space-around;
-    left: 0;
-    top: 0;
-    color: #fff;
-    font-family: var(--Mfont--);
-    line-height: 150%;
-    opacity: 0;
-}
-
-section .box .TT:nth-child(3) .allpbox{
+section .Pbox{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 100%;
-    line-height: 200%;
-    padding: 0;
-}
-section .box:nth-child(5) .TT{
-    height: 50%;
+    height: 30%;
+    gap: 1%;
+    margin-bottom: 1%;
 }
 
-section .box figure img{
-    width: 100%;
-    height: fit-content;
-}
+/* ////////////////////// */
 
-
-/* ////////////////////////////// */
-
-.vol{
+.number{
+    margin-top: -5%;
     width: 100%;
-    height: 20rem;
-    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-.vol .volumeL{
-    position: absolute;
-    width: 30%;
-    height: 80%;
-    top: 0;
-    left: 0;
+.number .n{
+    margin: 0 1%;
 }
-.vol .volumeL img{
-    width: 100%;
-    height: 100%;
+.number .n:nth-child(1){
+    color: var(--Pcolor--);
+    font-weight: 700;
 }
 
 
@@ -314,7 +233,7 @@ footer{
     justify-content: space-between;
     color: #808080;
     font-size: 0.9rem;
-    margin-top: 25%;
+    margin-top: 15%;
 }
 footer .footerT p{
     width: 100%;
@@ -332,10 +251,12 @@ footer .copyright{
 
 
 
+
 @media screen and (max-width:1200px){
+
     .mlogo{
         font-size: 3.5rem;
-        line-height: 6rem;
+        line-height: 5.3rem;
     }
 
     #hmenu ul li{
@@ -347,9 +268,6 @@ footer .copyright{
         width: 80%;
     }
 
-    .menubox{
-        font-size: 2rem;
-    }
 
     #title{
         font-size: 2.5rem;
@@ -361,10 +279,6 @@ footer .copyright{
     #list{
         font-size: 1.5rem;
     }
-    .vol{
-        height: 13rem;
-    }
-
 
 }
 
@@ -376,18 +290,14 @@ footer .copyright{
         line-height: 6rem;
     }
 
-    .vol{
-        height: 13rem;
-    }
 }
 
 
-@media screen and (max-width:767px) {
 
+@media screen and (max-width:767px){
     .mlogo{
         font-size: 2.5rem;
     }
-
 
     #hmenu{
         width: 100%;
@@ -405,46 +315,36 @@ footer .copyright{
     }
     #menu .closeB{
         top: 30%;
-        right: 8%;
+        right: 6%;
+    }
+    #menu .closeB img{
+        width: 80%;
     }
 
-    .vol .volumeR{
-        top: -60%;
-    }
-    .vol .volumeL{
-        margin-top: 10%;
-    }
-
-    section{
-        grid-template-columns: repeat(2,1fr);
-        gap: 5%;
-    }
-
-    
-   
-
-    #title{
+    #title{ 
         font-size: 2rem;
         margin: 10% auto;
     }
     #S_title{
-        font-size: 3rem;
         margin: 10% auto;
     }
+    #S_title span{
+        font-size: 2.5rem;
+
+    }
     #list{
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
-    .vol{
-        height: 10rem;
+    .number .n{
+        font-size: 0.9rem;
     }
-
 
     footer{
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        margin-top: 35%;
+        margin-top: 15%;
         font-size: 0.8rem;
     }
     footer .footerT p{
@@ -455,30 +355,17 @@ footer .copyright{
     }
 
 
-}
-/* /////////////////////////////////////////// */
 
-@media screen and (max-width:661px){
-
-    section .box .TT{
-        font-size: 0.8rem;
-    }
 }
-@media screen and (max-width:529px){
 
-    section .box .TT{
-        font-size: 0.7rem;
-    }
-}
-@media screen and (max-width:463px){
 
-    section .box .TT{
-        font-size: 0.6rem;
-    }
-}
-/* ////////////////////////////////////////////// */
 
 @media screen and (max-width:400px){
+
+    .mlogo{
+        font-size: 2.3rem;
+        line-height: 5rem;
+    }
 
     #hmenu{
         margin: 0 auto;
@@ -499,50 +386,34 @@ footer .copyright{
         width: 70%;
        
     }
-
-    .mlogo{
-        font-size: 2.3rem;
-        line-height: 5rem;
+    #text{
+        width: 100%;
     }
-
-
-    #title{
+    #title h3{
         font-size: 1.5rem;
         margin: 20% auto;
     }
     #S_title{
-        font-size: 2.5rem;
+        width: 90%;
         margin: 15% auto;
     }
-    #list{
-        font-size: 1.1rem;
+    #S_title span{
+        font-size: 2rem;
+    }
+
+    
+    #list ul{
+        margin: auto;
+        width: 95%;
+        font-size: 0.8rem;
     }
     #list ul li{
-        margin-right: 10%;
+        margin-right: 3%;
+    }
+    .number{
+        font-size: 0.7rem;
     }
 
-
-
-    section{
-        grid-template-columns: repeat(1,1fr);
-        gap: 3%;
-        margin-bottom: 30rem;
-    }
-
-    section .box .TT{
-        font-size: 1rem;
-    }
-
-    .vol .volumeR{
-        display: none;
-    }
-
-    .vol .volumeL{
-        margin-top: -10rem;
-    }
-
-    
-    
     footer .footerT p{
         width: 90%;
         line-height: 150%;
@@ -551,4 +422,5 @@ footer .copyright{
     footer .copyright{
         font-size: 0.7rem;
     }
+    
 }

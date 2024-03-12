@@ -606,6 +606,9 @@ main p{
     justify-content: space-around;
     
 }
+.menubox ul li:hover{
+    color: var(--Pcolor--);
+}
 .imgbox{
     width: 30%;
     background-color: #ffffff;
