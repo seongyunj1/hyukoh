@@ -1,0 +1,411 @@
+@import "./reset.css";
+
+
+:root{
+    --Pcolor--: #fc9292;
+    --Mfont-- : "Mfont";
+    --Pfont-- : "Pfont";
+}
+
+@font-face{
+    font-family: "Pfont"; 
+    src: url('../font/Brampton Serif Demo.otf');
+}
+@font-face{
+    font-family: "Mfont";
+    src: url('../font/NotoSansKR-VariableFont_wght.ttf');
+}
+
+*::-webkit-scrollbar{
+    background-color: #ffffff;
+    width: 5%;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #202020;
+   
+}
+*{
+    user-select: none;
+}
+
+
+body{
+    font-family: var(--Mfont--);
+}
+
+.text_hidden{display: none;}
+
+
+
+/* //////////////////////////////////////////// */
+
+#menu{
+    width: 100%;
+    margin: auto;
+    height: 10%;
+    position: relative;
+    /* position: fixed; */
+    z-index: 9990;
+    background-color: #101010;
+    position: fixed;
+}
+.mlogo{
+    display: block;
+    color: var(--Pcolor--);
+    font-family: var(--Pfont--);
+    font-size: 4rem;
+    line-height: 6.5rem;
+    padding-left: 5%;
+}
+
+#menu .menuB{
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: 9999;
+}
+#menu .menuB:hover{
+    cursor: pointer;
+}
+
+
+#menu .closeB{
+    display:none; 
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: 9999;
+}
+#menu .closeB:hover{
+    cursor: pointer;
+}
+
+/* ////////////////////////////////////// */
+
+header{
+     display: none;
+     position: fixed;
+     z-index: 9999;
+     background-color: #101010;
+     top: 10vh;
+     left: 0;
+     width: 100%;
+     overflow: hidden;
+}
+#hmenu{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    padding-top: 3%;
+    display: grid;
+    background-color: #101010;
+    grid-template-columns: repeat(2,3fr);
+    margin-left: 8%;
+    z-index: 9999;
+    color: #ffffff;
+}
+#hmenu img{width: 100%;}
+ #hmenu ul li{
+    width: 70%;
+    font-size: 3.5rem;
+    margin-top: 1%;
+    margin-bottom: 7%;
+    line-height: 5rem;
+}
+
+/* ////////////////////////////////////////////////////// */
+
+
+
+#text{
+    /* width: calc(100% - 320px); */
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 10%;
+    font-family: var(--Pfont--);
+    margin: auto;
+}
+
+#title{
+    width: 100%;
+    margin: 3% auto;
+    font-size: 3rem;
+    height: fit-content;
+    text-align: center;
+    color: var(--Pcolor--);
+}
+#S_title{
+    width: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 5%;
+}
+#list{
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 8%;
+    font-size: 1.3rem;
+    font-family: var(--Mfont--);
+    margin-bottom: 5%;
+}
+#list ul{
+    display: flex;
+}
+#list ul li{
+    width: fit-content;
+    height: fit-content;
+    margin-right: 3%;
+}
+#list ul li:nth-child(1){
+    font-weight: 600;
+}
+#list ul li:nth-child(1)::after{
+    content: '';
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin-top: 1%;
+    background-color: var(--Pcolor--);
+    
+}
+
+/* /////////////////////////////////////////////// */
+
+
+
+section{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 3% auto;
+    gap: 8% 5%;
+    margin-top: 0%;
+}
+
+
+section article .mv{
+    width: 100%;
+    height: 15vw;
+}
+section article .mv iframe{
+    width: 100%;
+    height: 100%;
+}
+
+section article h4{
+    font-weight: 600;
+    margin-top: 3%;
+}
+section article p{
+    font-size: 0.8rem;
+    line-height: 150%;
+    margin-top: 1%;
+}
+
+
+
+
+/* //////////////////////// */
+
+
+
+footer{
+    margin-bottom: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #808080;
+    font-size: 0.9rem;
+    margin-top: 30%;
+}
+footer .footerT p{
+    width: 100%;
+    margin-bottom: 4%;
+    margin-left: 8%;
+}
+footer .copyright{
+    align-self: flex-end;
+    line-height: 20px;
+    margin-bottom: 2%;
+    margin-right: 5%;
+}
+
+/* //////////////////////// */
+
+
+
+@media screen and (max-width:1200px){
+
+    .mlogo{
+        font-size: 3.5rem;
+        line-height: 6rem;
+    }
+
+    #hmenu ul li{
+        font-size: 2rem;
+    }
+
+
+    #menu .menuB img{
+        width: 80%;
+    }
+
+    .menubox{
+        font-size: 2rem;
+    }
+
+    #text{
+        height: 40vw;
+    }
+
+    #title{
+        font-size: 2rem;
+        margin: 5% auto;
+    }
+    #S_title{
+        font-size: 3rem;
+    }
+    #list{
+        font-size: 0.9rem;
+    }
+
+    section article h4{
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    section article p{
+        font-size: 0.7rem;
+        line-height: 150%;
+        margin-top: 2%;
+    }
+    footer{
+        font-size: 0.8rem;
+    }
+
+}
+
+
+@media screen and (max-width:1024px){
+
+    section{
+        margin-top: 5%;
+    }
+    section article h4{
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
+
+    #hmenu ul li{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width:767px){
+
+
+    #text{
+        min-height: 55vw;
+    }
+    #title{
+        font-size: 1.8rem;
+        margin-top: 15%;
+    }
+    #S_title{
+        font-size: 2.5rem;
+    }
+
+    #list{
+        font-size: 0.8rem;
+    }
+
+    section{
+        margin-top: 0;
+        grid-template-columns: repeat(2,1fr);
+        margin-bottom: 70vw;
+    }
+
+    section article .mv{
+        height: 25vw;
+    }
+
+
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    footer .footerT p{
+        margin: 4% auto;
+    }
+    footer .copyright{
+        margin: 4% auto;
+    }
+
+
+
+}
+
+@media screen and (max-width:520px){
+    section{
+        margin-bottom: 85vw;
+    }
+    footer{
+        line-height: 150%;
+    }
+    #list{
+        width: 100%;
+    }
+    #list ul{
+        width: 100%;
+    }
+    #list ul li{
+        width: 100%;
+        height: 15vw;
+        flex-wrap: wrap;
+        background-color: #808080;
+    }
+}
+
+@media screen and (max-width:600px){
+    #text{
+        min-height: 55vw;
+    }
+    #list{
+        font-size: 0.7rem;
+    }
+}
+
+
+@media screen and (max-width:400px){
+
+
+    #title{
+        font-size: 1.5rem;
+        margin: 5% auto;
+    }
+    #S_title{
+        font-size: 2rem;
+    }
+    #list{
+        font-size: 0.8rem;
+    }
+
+
+    section{
+        grid-template-columns: repeat(1,1fr);
+        margin-bottom: 100vw;
+    }
+
+    section article .mv{
+        height: 50vw;
+    }
+
+}
