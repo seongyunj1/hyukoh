@@ -50,7 +50,7 @@ body{
     color: var(--Pcolor--);
     font-family: var(--Pfont--);
     font-size: 3.8rem;
-    line-height: 6.5rem;
+    line-height: 6rem;
     padding-left: 5%;
 }
 
@@ -264,8 +264,8 @@ footer .copyright{
 
 
     .mlogo{
-        line-height: 6rem;
-        font-size: 3.5rem;
+        line-height: 5rem;
+        font-size: 3rem;
     }
 
     #menu .menuB img{
@@ -291,7 +291,7 @@ footer .copyright{
 @media screen and (max-width:1024px){
 
     .mlogo{
-        line-height: 6rem;
+        line-height: 5rem;
         font-size: 3rem;
     }
 
@@ -409,8 +409,9 @@ footer .copyright{
    
 
     .topbtn .btn{
-        width: 4vw;
-        height: 4vw;
+        width: 25px;
+        height: 25px;
+        border-radius: 100px;
     }
 
     footer{
@@ -454,39 +455,9 @@ footer .copyright{
 
     .mlogo{
         font-size: 2.3rem;
-        line-height: 5.5rem;
+        line-height: 5rem;
     }
 
-
-
-
-
-    /* header{
-        top: 8%;
-    }
-
-
-    .mlogo{
-        font-size: 2.5rem;
-        line-height: 4.5rem;
-    }
-    #hmenu ul li{
-        font-size: 1.2rem;
-        margin-bottom: 25%;
-        line-height: 3rem;
-    }
-
-    #menu{
-        height: 8%;
-    }
-
-    #menu nav .menuB{
-        top: 30%;
-    }
-    #menu nav .menuB img{
-        width: 70%;
-       
-    } */
 
     #profile{
         height: 15rem;
@@ -513,5 +484,6 @@ footer .copyright{
         height: 15px;
         border-radius: 100px;
     }
+    
    
 }

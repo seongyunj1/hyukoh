@@ -340,6 +340,33 @@ footer .copyright{
         font-size: 0.9rem;
     }
 
+    section{
+        width: 100%;
+        margin: 0;
+        height: fit-content;
+    }
+    section .item{
+        display: block;
+        background-color: #fc9292;
+    }
+    section .Pbox .item:hover{
+        cursor: pointer;
+    }
+    section .Pbox{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: #fc9292;
+        margin: 0;
+        gap: 0;
+    }
+    section .Pbox .box{
+        width: 50%;
+        height: fit-content;
+        display: inline-block;
+    }
+  
+
     footer{
         flex-direction: column;
         justify-content: center;
