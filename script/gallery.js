@@ -17,4 +17,17 @@ $(function () {
             $(".menuB").stop(true).show();
         }
     })
+    
+});
+   
+
+$(function(){
+
+    $("a.item").colorbox();
+    
+    
+    
+    AOS.init();
+    
+    
 });
