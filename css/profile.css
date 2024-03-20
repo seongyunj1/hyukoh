@@ -35,23 +35,23 @@ body{
 
 .text_hidden{display: none;}
 
-#menu{
+#menu {
     width: 100%;
     margin: auto;
     height: 10%;
     position: relative;
-    /* position: fixed; */
     z-index: 9990;
     background-color: #101010;
     position: fixed;
 }
-.mlogo{
+
+.mlogo {
     display: block;
     color: var(--Pcolor--);
     font-family: var(--Pfont--);
-    font-size: 3.8rem;
-    line-height: 6rem;
-    padding-left: 5%;
+    font-size: 4rem;
+    line-height: 6.3rem;
+    padding-left: 4%;
 }
 
 #menu .menuB{
