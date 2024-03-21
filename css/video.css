@@ -456,6 +456,7 @@ footer .copyright{
         margin: 0 auto;
         width: 100%;
         padding-left: 8%;
+        padding-top: 0;
     }
     #hmenu ul li{
         font-size: 1.2rem;
