@@ -17,4 +17,8 @@ $(function () {
             $(".menuB").stop(true).show();
         }
     })
+
+    AOS.init();
+
+    
 });
