@@ -134,6 +134,7 @@ header{
     height: fit-content;
     text-align: center;
     color: var(--Pcolor--);
+    margin-top: 10%;
 }
 #S_title{
     width: 100%;
@@ -141,7 +142,8 @@ header{
     display: flex;
     justify-content: space-between;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 #list{
     width: 100%;
@@ -266,10 +268,10 @@ footer .copyright{
 
     #title{
         font-size: 3rem;
-        margin: 5% auto;
     }
     #S_title{
         font-size: 3rem;
+        margin-top: 15%;
     }
     #list{
         font-size: 0.9rem;
@@ -295,10 +297,7 @@ footer .copyright{
 
 
     #title{
-        margin-top: 10%;
-    }
-    #S_title{
-        margin-top: 3%;
+        margin-top: 15%;
     }
     #list{
         margin-bottom: 0;
@@ -358,9 +357,10 @@ footer .copyright{
     }
     #title{
         font-size: 1.8rem;
-        margin-top: 15%;
+        margin-top: 20%;
     }
     #S_title{
+        margin: 20% auto;
         font-size: 2.5rem;
     }
 
@@ -402,18 +402,18 @@ footer .copyright{
 
 @media screen and (max-width:520px){
     
-
+/* 
     #text{
-        /* height: 20rem; */
+        height: 20rem; 
         padding-top: 15%;
         overflow: hidden;
-    }
-    #title h2{
+    }*/
+    /* #title h2{
         margin-bottom: 10%;
     }
     #S_title h2{
         margin-bottom: 10%;
-    }
+    } */
 
     #list ul{
         /* margin-top: 30%; */
@@ -489,13 +489,13 @@ footer .copyright{
 
 
 
-    #title h2{
+    #title{
         font-size: 1.5rem;
-        margin-top: 25%;
+        margin-top: 40%;
     }
-    #S_title h2{
+    #S_title{
         font-size: 1.5rem;
-        margin-top: 10%;
+        margin-top: 30%;
     }
     #list ul{
         font-size: 0.9rem;
