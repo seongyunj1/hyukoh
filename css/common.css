@@ -183,6 +183,7 @@ main p{
     margin-bottom: 15%;
     position: relative;
     z-index: 99;
+    margin-top: 5%;
 }
 
 #profile .leftS img{
@@ -238,9 +239,10 @@ main p{
     filter: grayscale(0);
 }
 
-#profile span{
+#profile .text{
     font-size: 5rem;
     font-family: var(--Pfont--);
+    margin-bottom: 5%;
 }
 #profile .number{
     color: var(--Pcolor--);
@@ -263,6 +265,7 @@ main p{
 #profile .textR{
     display: flex;
     justify-content: right;
+    margin-top: 10%;
 }
 #profile .leftS{
     display: flex;

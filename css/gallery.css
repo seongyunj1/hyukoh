@@ -194,7 +194,7 @@ section{
     height: 70vw;
     overflow: hidden;
     margin: auto;
-    /* position: relative; */
+    position: relative;
 }
 /* section .Pbox{
     display: flex;
@@ -399,7 +399,7 @@ footer .copyright{
        
     }
     #text{
-        width: 100%;
+        width: 95%;
     }
     #title h3{
         font-size: 1.5rem;
@@ -431,8 +431,8 @@ footer .copyright{
     section .itembox{
         flex-direction: column;
         width: 100%;
+        margin: auto;
     }
-
 
 
 
