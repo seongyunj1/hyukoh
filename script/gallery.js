@@ -23,10 +23,10 @@ $(function () {
 // $(function () {
 //     $(".item").on({
 //         click: function () {
-//             $(this).find('span,p').stop(true).animate({opacity:'1'},500,'linear');
+//             $(this).find('body').stop(true).animate({opacity:'1'},500,'linear');
 //         },
 //         click:function(){
-//             $(this).find('span,p').stop(true).animate({opacity:'0'},300,'linear');
+//             $(this).find('body').stop(true).animate({opacity:'0'},300,'linear');
 //         }
 //     });
 // });

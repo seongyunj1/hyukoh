@@ -138,6 +138,6 @@ $('.topbtn').click(function () {
 
 ////////////////////
 
-
+AOS.init();
 
 

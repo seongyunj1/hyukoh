@@ -33,4 +33,9 @@ $(function () {
             // $("span,p").stop(true).animate({opacity:'0'})
         }
     });
+
+
+    AOS.init();
+
+
 });
